@@ -1,0 +1,53 @@
+{% extends 'details.html' %}
+
+{% block title %}
+Avto Baza
+{% endblock %}
+
+{% block inside %}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash" {{cat}}>{{msg}}</div>
+{% endfor %}
+<form method="POST">
+    <label for="param4"> Detail id: </label>
+<select   name="param4" >
+    {% for el in values %}
+    <option>{{ el }}</option>
+    {% endfor %}
+</select>
+    <label for="param1"> Name: </label>
+<input type="text" name="param1" />
+    <label for="param2"> Cost: </label>
+<input type="number" name="param2" required/>
+    <label for="param3"> Size: </label>
+<input type="number" name="param3" required/>
+    
+<input type="submit" value="Submit">
+</form>
+<h2 align="center"> {{ title }} </h2>
+
+  <table align='center' class='table text-black bg-white' style='width: 50%'>
+    <thead><tr>
+    {% if id_first %}
+      <td scope='col'>id</td>
+    {% else %}
+      <td scope='col'>{{ columns[0] }}</td>
+    {% endif %}
+
+    {% for col in columns[1:] %}
+        <td scope='col'> {{ col }} </td>
+    {% endfor %}
+    </tr></thead>
+    {% for row in table %}
+        <tr>
+        {% for element in row %}
+            <td>
+                {% if element %}
+                {{element}}
+                {% endif %}
+            </td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

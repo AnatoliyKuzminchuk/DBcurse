@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block inside %}
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" href="/suppliers/select"> All </a>
+        <a class="nav-link" href="/suppliers/1">Suppliers by type(req_1_1)</a>
+        <a class="nav-link" href="/suppliers/2">Suppliers by date and amount(req_1_2)</a>
+        <a class="nav-link" href="/suppliers/3">Top 10 suppliers(req_5_2)</a>
+        <a class="nav-link" href="/suppliers/8">Add supplier</a>
+        <a class="nav-link" href="/suppliers/9">Modify supplier</a>
+      </nav>
+    </div>
+
+</div>
+
+<div class="cover-container d-flex w-100 h-150 p-3 mx-auto flex-column">
+    <label> Request 7 </label>
+</div>
+
+<div class="cover-container d-flex w-100 h-170 p-3 mx-auto flex-column">
+    <div>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" href="/suppliers/4">Supplier part on numbers/turnover</a>
+        <a class="nav-link" href="/suppliers/5">Supplier part on percents/turnover</a>
+        <a class="nav-link" href="/suppliers/6">Supplier part on money/turnover</a>
+        <a class="nav-link" href="/suppliers/7">Supplier part on money/input</a>
+
+      </nav>
+    </div>
+
+</div>
+
+{% endblock %}

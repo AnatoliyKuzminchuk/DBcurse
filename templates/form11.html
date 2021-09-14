@@ -1,0 +1,30 @@
+{% extends 'work.html' %}
+
+{% block title %}
+Avto Baza
+{% endblock %}
+
+{% block inside %}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash" {{cat}}>{{msg}}</div>
+{% endfor %}
+<form method="POST"> 
+<label for="param1"> Detail type: </label>
+<select   name="param1" >
+    {% for el in values %}
+    <option>{{ el }}</option>
+    {% endfor %}
+</select>
+    <label for="param2"> Data: </label>
+<input type="date" name="param2" />
+    <label for="param3"> Quantity: </label>
+<input type="number" name="param3" required/>
+    <label for="param4"> Client id: </label>
+<select   name="param4" >
+    {% for el in values1 %}
+    <option>{{ el }}</option>
+    {% endfor %}
+</select>
+<input type="submit" value="Submit">
+</form>
+{% endblock %}

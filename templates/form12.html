@@ -1,0 +1,19 @@
+{% extends 'details.html' %}
+
+{% block title %}
+Avto Baza
+{% endblock %}
+
+{% block inside %}
+<form method="POST">
+
+  <label for="id">Choose detail type:</label>
+<select   name="id" >
+    {% for el in values %}
+    <option>{{ el }}</option>
+    {% endfor %}
+</select>
+    
+<input type="submit" value="Submit">
+</form>
+{% endblock %}

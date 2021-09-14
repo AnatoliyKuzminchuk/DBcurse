@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block inside %}
+<h6 align="centre"> {{ defenition }} </h6>
+<h2 align="center"> {{ title }} </h2>
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <label for="id">{{ text1 }} {{output1}}</label>
+    <label for="id">{{ text2 }} {{output2}}</label>
+    <label for="id">{{ text3 }} {{output3}}</label>
+    <label for="id">{{ text4 }} {{output4}}</label>
+    <label for="id">{{ text5 }} {{output5}}</label>
+</div>
+
+{% endblock %}

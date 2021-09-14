@@ -1,0 +1,22 @@
+{% extends 'suppliers.html' %}
+
+{% block title %}
+Avto Baza
+{% endblock %}
+
+{% block inside %}
+<form method="POST"> 
+<label for="id">Choose supplier id:</label>
+<select   name="id" >
+    {% for el in values %}
+    <option>{{ el }}</option>
+    {% endfor %}
+</select>
+
+<label for="param2">Interval:</label>
+<input type="date" name="param2" />   
+<input type="date" name="param3" />
+    
+<input type="submit" value="Submit">
+</form>
+{% endblock %}

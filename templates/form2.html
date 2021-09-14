@@ -1,0 +1,32 @@
+{% extends 'suppliers.html' %}
+
+{% block title %}
+Avto Baza
+{% endblock %}
+
+{% block inside %}
+<form method="POST"> 
+<label for="param1">Threshold_amount:</label>
+<input type="number" name="param1" required/>
+
+<label for="param2">Interval:</label>
+<input type="date" name="param2" />   
+<input type="date" name="param3" />
+    
+<label for="param4">Choose type:</label>
+  <select   name="param4" >
+    <option>dealer</option>
+    <option>large firm</option>
+    <option>small firm</option>
+</select>
+
+  <label for="id_by">Choose id:</label>
+<select   name="id_by" >
+    {% for el in values %}
+    <option>{{ el }}</option>
+    {% endfor %}
+</select>
+    
+<input type="submit" value="Submit">
+</form>
+{% endblock %}
